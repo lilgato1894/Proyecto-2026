@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Participantes | Gran Sorteo 2026</title>
+
+    <style>
+        :root {
+            --green-dark: #166534;
+            --green-deep: #14532D;
+            --green-main: #16A34A;
+            --green-light: #DCFCE7;
+            --green-very-light: #ECFDF5;
+            --background: #F0FDF4;
+            --white: #FFFFFF;
+            --border: #BBF7D0;
+            --text: #14532D;
+            --text-secondary: #4B5563;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: var(--background);
+            color: var(--text);
+        }
+
+        header {
+            background: var(--white);
+            border-bottom: 1px solid var(--border);
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        .header-content {
+            min-height: 72px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            font-size: 1.3rem;
+            font-weight: 900;
+            color: var(--green-deep);
+        }
+
+        .logo span {
+            color: var(--green-main);
+        }
+
+        .back {
+            color: var(--green-main);
+            font-weight: 700;
+        }
+
+        main {
+            padding: 60px 0;
+        }
+
+        .title {
+            text-align: center;
+            margin-bottom: 35px;
+        }
+
+        .title h1 {
+            color: var(--green-deep);
+            margin-bottom: 10px;
+        }
+
+        .title p {
+            color: var(--text-secondary);
+        }
+
+        .participants-box {
+            background: var(--white);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            overflow: hidden;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th {
+            background: var(--green-deep);
+            color: var(--white);
+            padding: 16px;
+            text-align: left;
+        }
+
+        td {
+            padding: 15px 16px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        tr:last-child td {
+            border-bottom: none;
+        }
+
+        tr:nth-child(even) {
+            background: var(--green-very-light);
+        }
+
+        .ticket {
+            font-weight: 800;
+            color: var(--green-main);
+        }
+
+        .notice {
+            margin-top: 20px;
+            padding: 18px;
+            background: var(--green-light);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        footer {
+            margin-top: 40px;
+            background: #052E16;
+            color: #DCFCE7;
+            text-align: center;
+            padding: 25px;
+            font-size: 0.85rem;
+        }
+
+        @media (max-width: 600px) {
+
+            th,
+            td {
+                padding: 12px 10px;
+                font-size: 0.9rem;
+            }
+
+            main {
+                padding: 40px 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+
+        <div class="container header-content">
+
+            <a href="index.html" class="logo">
+                GRAN<span>SORTEO</span>
+            </a>
+
+            <a href="index.html" class="back">
+                Volver
+            </a>
+
+        </div>
+
+    </header>
+
+
+    <main>
+
+        <div class="container">
+
+            <div class="title">
+
+                <h1>
+                    Participantes
+                </h1>
+
+                <p>
+                    Listado público de participantes con ticket confirmado.
+                </p>
+
+            </div>
+
+
+            <div class="participants-box">
+
+                <table>
+
+                    <thead>
+
+                        <tr>
+                            <th>
+                                Participante
+                            </th>
+
+                            <th>
+                                Ticket
+                            </th>
+                        </tr>
+
+                    </thead>
+
+                    <tbody>
+
+                        <tr>
+                            <td>
+                                Juan Pérez
+                            </td>
+
+                            <td class="ticket">
+                                00001
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                María López
+                            </td>
+
+                            <td class="ticket">
+                                00002
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                Carlos Rodríguez
+                            </td>
+
+                            <td class="ticket">
+                                00003
+                            </td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+
+            <div class="notice">
+
+                Por privacidad, únicamente se muestra el primer nombre
+                y primer apellido de cada participante. Los datos personales
+                y comprobantes de pago no son públicos.
+
+            </div>
+
+        </div>
+
+    </main>
+
+
+    <footer>
+
+        © 2026 Gran Sorteo. Todos los derechos reservados.
+
+    </footer>
+
+</body>
+</html>
