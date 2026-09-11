@@ -1,1 +1,578 @@
+<!DOCTYPE html>
+
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+```
+<title>Comprar mi ticket | Gran Sorteo 2026</title>
+
+<meta
+    name="description"
+    content="Realiza el pago de tu ticket para participar en el Gran Sorteo 2026."
+>
+
+<style>
+    :root {
+        --green-dark: #166534;
+        --green-deep: #14532D;
+        --green-main: #16A34A;
+        --green-medium: #15803D;
+        --green-light: #DCFCE7;
+        --green-very-light: #ECFDF5;
+
+        --background: #F0FDF4;
+        --lime: #84CC16;
+
+        --text: #14532D;
+        --text-secondary: #4B5563;
+
+        --white: #FFFFFF;
+        --border: #BBF7D0;
+        --footer: #052E16;
+    }
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+        background: var(--background);
+        color: var(--text);
+        line-height: 1.6;
+    }
+
+    a {
+        color: inherit;
+        text-decoration: none;
+    }
+
+    .container {
+        width: 90%;
+        max-width: 900px;
+        margin: 0 auto;
+    }
+
+    /* HEADER */
+
+    header {
+        background: var(--white);
+        border-bottom: 1px solid var(--border);
+    }
+
+    .header-content {
+        min-height: 72px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 20px;
+    }
+
+    .logo {
+        font-size: 1.35rem;
+        font-weight: 900;
+        color: var(--green-deep);
+        letter-spacing: -0.5px;
+    }
+
+    .logo span {
+        color: var(--green-main);
+    }
+
+    .header-link {
+        font-size: 0.95rem;
+        font-weight: 700;
+        color: var(--green-dark);
+    }
+
+    .header-link:hover {
+        color: var(--green-main);
+    }
+
+    /* MAIN */
+
+    main {
+        padding: 65px 0 80px;
+    }
+
+    .purchase-box {
+        background: var(--white);
+        border: 1px solid var(--border);
+        border-radius: 20px;
+        padding: 45px;
+        box-shadow: 0 12px 35px rgba(20, 83, 45, 0.08);
+    }
+
+    .purchase-header {
+        text-align: center;
+        margin-bottom: 35px;
+    }
+
+    .purchase-header h1 {
+        color: var(--green-deep);
+        font-size: 2.25rem;
+        margin-bottom: 10px;
+    }
+
+    .purchase-header p {
+        color: var(--text-secondary);
+        max-width: 650px;
+        margin: 0 auto;
+    }
+
+    /* PRICE */
+
+    .price-box {
+        background: var(--green-very-light);
+        border: 1px solid var(--border);
+        border-radius: 14px;
+        padding: 20px;
+        text-align: center;
+        margin-bottom: 35px;
+    }
+
+    .price-box strong {
+        display: block;
+        color: var(--green-main);
+        font-size: 2rem;
+        line-height: 1.2;
+        margin-bottom: 4px;
+    }
+
+    .price-box span {
+        color: var(--text-secondary);
+        font-size: 0.9rem;
+    }
+
+    /* STEPS */
+
+    .step-title {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        margin-bottom: 15px;
+    }
+
+    .step-number {
+        width: 34px;
+        height: 34px;
+        min-width: 34px;
+        border-radius: 50%;
+        background: var(--green-main);
+        color: var(--white);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 900;
+    }
+
+    .step-title h2 {
+        color: var(--green-deep);
+        font-size: 1.25rem;
+    }
+
+    .instruction {
+        color: var(--text-secondary);
+        margin-bottom: 20px;
+    }
+
+    /* BANK */
+
+    .bank-box {
+        border: 1px solid var(--border);
+        border-left: 5px solid var(--green-main);
+        border-radius: 10px;
+        padding: 18px 20px;
+        margin-bottom: 30px;
+        background: #FAFFFB;
+    }
+
+    .bank-box strong {
+        color: var(--green-deep);
+    }
+
+    /* QR */
+
+    .qr-area {
+        border: 2px dashed var(--green-main);
+        border-radius: 16px;
+        background: var(--green-very-light);
+        min-height: 330px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 25px;
+        margin-bottom: 35px;
+    }
+
+    .qr-placeholder {
+        width: 220px;
+        height: 220px;
+        border: 1px solid var(--border);
+        border-radius: 12px;
+        background: var(--white);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--green-main);
+        font-weight: 800;
+        margin-bottom: 15px;
+    }
+
+    .qr-area p {
+        color: var(--text-secondary);
+        font-size: 0.9rem;
+    }
+
+    /* NOTICE */
+
+    .notice {
+        background: var(--green-light);
+        border-radius: 12px;
+        padding: 18px 20px;
+        margin-bottom: 35px;
+    }
+
+    .notice strong {
+        display: block;
+        color: var(--green-deep);
+        margin-bottom: 5px;
+    }
+
+    .notice p {
+        color: var(--text-secondary);
+        font-size: 0.92rem;
+    }
+
+    /* FORM BUTTON */
+
+    .form-section {
+        text-align: center;
+    }
+
+    .form-section p {
+        color: var(--text-secondary);
+        margin-bottom: 20px;
+    }
+
+    .form-button {
+        display: inline-block;
+        background: var(--green-main);
+        color: var(--white);
+        padding: 15px 28px;
+        border-radius: 10px;
+        font-weight: 900;
+        transition: 0.2s ease;
+        box-shadow: 0 7px 18px rgba(22, 163, 74, 0.2);
+    }
+
+    .form-button:hover {
+        background: var(--green-medium);
+        transform: translateY(-2px);
+    }
+
+    .back-link {
+        display: block;
+        text-align: center;
+        margin-top: 25px;
+        color: var(--green-main);
+        font-weight: 700;
+        font-size: 0.9rem;
+    }
+
+    .back-link:hover {
+        color: var(--green-deep);
+    }
+
+    /* FOOTER */
+
+    footer {
+        background: var(--footer);
+        color: #DCFCE7;
+        text-align: center;
+        padding: 25px 0;
+        font-size: 0.85rem;
+    }
+
+    footer p {
+        margin-bottom: 5px;
+    }
+
+    footer .footer-small {
+        color: #86EFAC;
+        font-size: 0.75rem;
+    }
+
+    /* MOBILE */
+
+    @media (max-width: 600px) {
+
+        .header-content {
+            min-height: 62px;
+        }
+
+        .logo {
+            font-size: 1.1rem;
+        }
+
+        .header-link {
+            font-size: 0.85rem;
+        }
+
+        main {
+            padding: 35px 0 55px;
+        }
+
+        .purchase-box {
+            padding: 28px 20px;
+            border-radius: 16px;
+        }
+
+        .purchase-header h1 {
+            font-size: 1.8rem;
+        }
+
+        .qr-area {
+            min-height: 290px;
+        }
+
+        .qr-placeholder {
+            width: 190px;
+            height: 190px;
+        }
+    }
+</style>
+```
+
+</head>
+
+<body>
+
+```
+<header>
+
+    <div class="container header-content">
+
+        <a href="index.html" class="logo">
+            GRAN<span>SORTEO</span>
+        </a>
+
+        <a href="index.html" class="header-link">
+            Volver al inicio
+        </a>
+
+    </div>
+
+</header>
+
+
+<main>
+
+    <div class="container">
+
+        <div class="purchase-box">
+
+            <div class="purchase-header">
+
+                <h1>
+                    Compra tu ticket
+                </h1>
+
+                <p>
+                    Sigue los pasos indicados para realizar tu pago
+                    y registrar correctamente tu participación en el
+                    Gran Sorteo 2026.
+                </p>
+
+            </div>
+
+
+            <div class="price-box">
+
+                <strong>
+                    Bs. 5
+                </strong>
+
+                <span>
+                    Precio por ticket
+                </span>
+
+            </div>
+
+
+            <div class="step-title">
+
+                <div class="step-number">
+                    1
+                </div>
+
+                <h2>
+                    Realiza el pago
+                </h2>
+
+            </div>
+
+            <p class="instruction">
+                El pago se realizará exclusivamente mediante
+                <strong>QR del Banco BNB</strong>.
+                Escanea el código desde la aplicación de tu banco
+                y realiza el pago correspondiente al ticket.
+            </p>
+
+
+            <div class="bank-box">
+
+                <strong>
+                    Método de pago
+                </strong>
+
+                <br>
+
+                Banco Nacional de Bolivia (BNB)
+
+                <br>
+
+                <span>
+                    Pago exclusivo mediante QR.
+                </span>
+
+            </div>
+
+
+            <div class="qr-area">
+
+                <!--
+                    ESPACIO RESERVADO PARA EL QR
+
+                    Cuando tengas la imagen, reemplaza este
+                    contenido por:
+
+                    <img
+                        src="assets/qr-bnb.png"
+                        alt="QR de pago BNB"
+                        class="qr-image"
+                    >
+                -->
+
+                <div class="qr-placeholder">
+                    QR DE PAGO BNB
+                </div>
+
+                <p>
+                    El código QR oficial de pago se mostrará aquí.
+                </p>
+
+            </div>
+
+
+            <div class="step-title">
+
+                <div class="step-number">
+                    2
+                </div>
+
+                <h2>
+                    Guarda tu comprobante
+                </h2>
+
+            </div>
+
+            <p class="instruction">
+                Después de realizar el pago, conserva el comprobante
+                de la operación. Lo necesitarás para completar el
+                registro de tu participación.
+            </p>
+
+
+            <div class="notice">
+
+                <strong>
+                    Importante
+                </strong>
+
+                <p>
+                    Realizar el pago no genera automáticamente un
+                    ticket. Tu participación será confirmada
+                    únicamente después de verificar el comprobante
+                    de pago.
+                </p>
+
+            </div>
+
+
+            <div class="step-title">
+
+                <div class="step-number">
+                    3
+                </div>
+
+                <h2>
+                    Registra tu participación
+                </h2>
+
+            </div>
+
+            <div class="form-section">
+
+                <p>
+                    Una vez realizado el pago, completa el formulario
+                    de participación y adjunta una fotografía o archivo
+                    de tu comprobante.
+                </p>
+
+                <!--
+                    CUANDO CREES EL GOOGLE FORM:
+
+                    Reemplaza "#" por el enlace del formulario.
+
+                    Ejemplo:
+                    href="https://docs.google.com/forms/..."
+                -->
+
+                <a
+                    href="#"
+                    class="form-button"
+                >
+                    ENVIAR COMPROBANTE
+                </a>
+
+            </div>
+
+
+            <a href="index.html" class="back-link">
+                ← Volver al inicio
+            </a>
+
+        </div>
+
+    </div>
+
+</main>
+
+
+<footer>
+
+    <div class="container">
+
+        <p>
+            © 2026 Gran Sorteo. Todos los derechos reservados.
+        </p>
+
+        <p class="footer-small">
+            Participación sujeta a los términos y condiciones del sorteo.
+        </p>
+
+    </div>
+
+</footer>
+```
+
+</body>
+</html>
 
