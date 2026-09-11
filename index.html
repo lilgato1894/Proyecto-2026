@@ -62,7 +62,7 @@
 
         /* =========================
            HEADER
-        ========================= */
+        ========================== */
 
         header {
             background: var(--white);
@@ -103,7 +103,7 @@
 
         /* =========================
            HERO
-        ========================= */
+        ========================== */
 
         .hero {
             background:
@@ -180,7 +180,7 @@
 
         /* =========================
            PRIZE CARD
-        ========================= */
+        ========================== */
 
         .prize-card {
             background: var(--white);
@@ -220,7 +220,7 @@
 
         /* =========================
            GENERAL SECTIONS
-        ========================= */
+        ========================== */
 
         section {
             padding: 75px 0;
@@ -243,7 +243,7 @@
 
         /* =========================
            STEPS
-        ========================= */
+        ========================== */
 
         .steps {
             background: var(--white);
@@ -289,7 +289,7 @@
 
         /* =========================
            DETAILS
-        ========================= */
+        ========================== */
 
         .details {
             background: var(--green-light);
@@ -297,8 +297,10 @@
 
         .details-grid {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
+            grid-template-columns: repeat(2, 1fr);
             gap: 20px;
+            max-width: 750px;
+            margin: 0 auto;
         }
 
         .detail-card {
@@ -323,7 +325,7 @@
 
         /* =========================
            TRUST
-        ========================= */
+        ========================== */
 
         .trust {
             background: var(--white);
@@ -375,7 +377,7 @@
 
         /* =========================
            SUPPORT
-        ========================= */
+        ========================== */
 
         .support {
             background: var(--green-deep);
@@ -417,7 +419,7 @@
 
         /* =========================
            SOCIAL
-        ========================= */
+        ========================== */
 
         .social {
             background: var(--green-very-light);
@@ -462,7 +464,7 @@
 
         /* =========================
            FOOTER
-        ========================= */
+        ========================== */
 
         footer {
             background: var(--footer);
@@ -483,7 +485,7 @@
 
         /* =========================
            RESPONSIVE
-        ========================= */
+        ========================== */
 
         @media (max-width: 800px) {
 
@@ -511,6 +513,7 @@
 
             .details-grid {
                 grid-template-columns: 1fr;
+                max-width: 500px;
             }
 
             section {
@@ -563,6 +566,7 @@
     ========================== -->
 
     <header>
+
         <div class="container header-content">
 
             <a href="index.html" class="logo">
@@ -574,6 +578,7 @@
             </a>
 
         </div>
+
     </header>
 
 
@@ -746,7 +751,7 @@
                     <div class="detail-card">
 
                         <strong>
-                            Bs. 50
+                            Bs. 5
                         </strong>
 
                         <span>
@@ -924,3 +929,4 @@
 
 </body>
 </html>
+
