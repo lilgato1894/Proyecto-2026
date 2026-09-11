@@ -2,7 +2,6 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <meta
@@ -58,14 +57,9 @@
         }
 
         body {
-            font-family:
-                Arial,
-                Helvetica,
-                sans-serif;
-
+            font-family: Arial, Helvetica, sans-serif;
             background: var(--background);
             color: var(--text);
-
             line-height: 1.6;
         }
 
@@ -81,20 +75,15 @@
 
         header {
             width: 100%;
-
             background: var(--white);
-
             border-bottom: 1px solid var(--border);
-
             position: relative;
             z-index: 10;
         }
 
         .header-container {
             max-width: 1200px;
-
             margin: 0 auto;
-
             padding: 18px 24px;
 
             display: flex;
@@ -102,15 +91,10 @@
             justify-content: space-between;
         }
 
-
-        /* LOGO */
-
         .logo {
             font-size: 22px;
             font-weight: 900;
-
             letter-spacing: -0.5px;
-
             color: var(--green-deep);
         }
 
@@ -118,16 +102,10 @@
             color: var(--green-main);
         }
 
-
-        /* HEADER LINK */
-
         .header-link {
             font-size: 14px;
-
             font-weight: 600;
-
             color: var(--green-medium);
-
             transition: 0.2s ease;
         }
 
@@ -150,16 +128,10 @@
                 );
 
             color: var(--white);
-
             padding: 75px 24px 85px;
-
             position: relative;
-
             overflow: hidden;
         }
-
-
-        /* Decorative circles */
 
         .hero::before {
             content: "";
@@ -193,21 +165,15 @@
             left: -100px;
         }
 
-
         .hero-container {
             max-width: 1100px;
-
             margin: 0 auto;
 
             position: relative;
-
             z-index: 2;
 
             text-align: center;
         }
-
-
-        /* LABEL */
 
         .hero-label {
             display: inline-block;
@@ -231,9 +197,6 @@
             margin-bottom: 20px;
         }
 
-
-        /* TITLE */
-
         .hero h1 {
             font-size: clamp(38px, 6vw, 64px);
 
@@ -245,7 +208,6 @@
 
             margin-bottom: 22px;
         }
-
 
         .hero-description {
             max-width: 680px;
@@ -312,40 +274,20 @@
         }
 
 
-        /* PHONE IMAGE PLACEHOLDER */
+        /* =========================================================
+           FOTO DEL HONOR MAGIC8 LITE
+        ========================================================= */
 
-        .phone-placeholder {
+        .phone-image {
+            display: block;
+
             width: 190px;
             height: 260px;
 
             margin: 0 auto 24px;
 
-            border-radius: 25px;
-
-            background:
-                linear-gradient(
-                    145deg,
-                    #DCFCE7,
-                    #BBF7D0
-                );
-
-            border: 2px dashed var(--green-main);
-
-            display: flex;
-
-            align-items: center;
-
-            justify-content: center;
-
-            text-align: center;
-
-            color: var(--green-medium);
-
-            font-size: 13px;
-
-            font-weight: 700;
+            object-fit: contain;
         }
-
 
         .prize-description {
             color: var(--text-secondary);
@@ -357,7 +299,7 @@
 
 
         /* =========================================================
-           MAIN CTA
+           BOTÓN PRINCIPAL
         ========================================================= */
 
         .main-button {
@@ -402,7 +344,7 @@
 
 
         /* =========================================================
-           GENERIC SECTION
+           SECCIÓN GENERAL
         ========================================================= */
 
         .section {
@@ -437,7 +379,7 @@
 
 
         /* =========================================================
-           HOW TO PARTICIPATE
+           PASOS
         ========================================================= */
 
         .steps {
@@ -448,7 +390,6 @@
 
             gap: 22px;
         }
-
 
         .step {
             background: var(--white);
@@ -472,7 +413,6 @@
             box-shadow:
                 0 12px 30px rgba(22, 101, 52, 0.08);
         }
-
 
         .step-number {
             width: 52px;
@@ -514,13 +454,14 @@
 
 
         /* =========================================================
-           DETAILS
+           DATOS DEL SORTEO
         ========================================================= */
 
         .details {
             background: var(--white);
 
             border-top: 1px solid var(--border);
+
             border-bottom: 1px solid var(--border);
         }
 
@@ -571,7 +512,7 @@
 
 
         /* =========================================================
-           TRUST SECTION
+           CONFIANZA
         ========================================================= */
 
         .trust {
@@ -628,7 +569,7 @@
 
 
         /* =========================================================
-           SUPPORT / SOCIAL
+           SOPORTE
         ========================================================= */
 
         .contact-section {
@@ -660,9 +601,6 @@
 
             margin-bottom: 30px;
         }
-
-
-        /* SUPPORT BUTTONS */
 
         .support-buttons {
             display: flex;
@@ -719,7 +657,7 @@
 
 
         /* =========================================================
-           SOCIAL MEDIA
+           REDES SOCIALES
         ========================================================= */
 
         .social-title {
@@ -828,7 +766,6 @@
             .section {
                 padding: 60px 20px;
             }
-
         }
 
 
@@ -860,7 +797,7 @@
                 font-size: 26px;
             }
 
-            .phone-placeholder {
+            .phone-image {
                 width: 165px;
                 height: 230px;
             }
@@ -874,7 +811,6 @@
             .section-header h2 {
                 font-size: 29px;
             }
-
         }
 
     </style>
@@ -907,10 +843,15 @@
 
 
     <!-- =========================================================
-         HERO
+         CONTENIDO PRINCIPAL
     ========================================================= -->
 
     <main>
+
+
+        <!-- =====================================================
+             HERO
+        ====================================================== -->
 
         <section class="hero">
 
@@ -934,7 +875,9 @@
 
 
 
-                <!-- PREMIO -->
+                <!-- =================================================
+                     PREMIO
+                ================================================== -->
 
                 <div class="prize-card">
 
@@ -942,21 +885,19 @@
                         Premio principal
                     </div>
 
+
                     <h2>
                         <span>HONOR</span> Magic8 Lite
                     </h2>
 
 
-                    <!--
-                        AQUÍ COLOCAREMOS LA IMAGEN REAL DEL TELÉFONO
-                    -->
+                    <!-- FOTO DEL TELÉFONO -->
 
-                    <div class="phone-placeholder">
-
-                        IMAGEN DEL<br>
-                        HONOR MAGIC8 LITE
-
-                    </div>
+                    <img
+                        src="assets/honor-magic8-lite.png"
+                        alt="HONOR Magic8 Lite"
+                        class="phone-image"
+                    >
 
 
                     <p class="prize-description">
@@ -969,7 +910,9 @@
 
 
 
-                <!-- CTA -->
+                <!-- =================================================
+                     BOTÓN DE COMPRA
+                ================================================== -->
 
                 <a
                     href="compra.html"
@@ -1010,8 +953,6 @@
             <div class="steps">
 
 
-                <!-- PASO 1 -->
-
                 <div class="step">
 
                     <div class="step-number">
@@ -1031,8 +972,6 @@
 
 
 
-                <!-- PASO 2 -->
-
                 <div class="step">
 
                     <div class="step-number">
@@ -1051,8 +990,6 @@
                 </div>
 
 
-
-                <!-- PASO 3 -->
 
                 <div class="step">
 
@@ -1232,7 +1169,7 @@
 
 
 
-                <!-- REDES -->
+                <!-- REDES SOCIALES -->
 
                 <div class="social-title">
                     Síguenos en redes sociales
