@@ -1,0 +1,874 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="Participa en nuestro gran sorteo. Conoce los premios, realiza tu compra y participa.">
+
+    <title>Gran Sorteo | Participa y gana</title>
+
+    <style>
+
+        /* =====================================================
+           PALETA DE COLORES
+           ===================================================== */
+
+        :root {
+            --color-primary: #1E3A8A;
+            --color-primary-dark: #172554;
+            --color-secondary: #2563EB;
+
+            --color-gold: #D4A72C;
+            --color-success: #15803D;
+
+            --color-background: #F8FAFC;
+            --color-white: #FFFFFF;
+
+            --color-text: #1E293B;
+            --color-text-secondary: #64748B;
+
+            --color-border: #E2E8F0;
+        }
+
+
+        /* =====================================================
+           RESET
+           ===================================================== */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: var(--color-background);
+            color: var(--color-text);
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+
+        /* =====================================================
+           HEADER
+           Fondo: #FFFFFF
+           Texto: #172554
+           ===================================================== */
+
+        header {
+            background-color: var(--color-white);
+            border-bottom: 1px solid var(--color-border);
+
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .navbar {
+            max-width: 1200px;
+            margin: auto;
+
+            padding: 18px 24px;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.4rem;
+            font-weight: 800;
+            color: var(--color-primary-dark);
+        }
+
+        .logo span {
+            color: var(--color-gold);
+        }
+
+        .nav-link {
+            color: var(--color-text-secondary);
+            font-weight: 600;
+            transition: color 0.2s ease;
+        }
+
+        .nav-link:hover {
+            color: var(--color-primary);
+        }
+
+
+        /* =====================================================
+           HERO
+           Fondo: #172554
+           Azul principal oscuro
+           ===================================================== */
+
+        .hero {
+            background:
+                linear-gradient(
+                    135deg,
+                    #172554 0%,
+                    #1E3A8A 100%
+                );
+
+            color: var(--color-white);
+
+            padding: 90px 24px 100px;
+
+            text-align: center;
+        }
+
+        .hero-content {
+            max-width: 900px;
+            margin: auto;
+        }
+
+        .hero-label {
+            display: inline-block;
+
+            color: var(--color-gold);
+
+            font-weight: 700;
+            font-size: 0.9rem;
+
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+
+            margin-bottom: 18px;
+        }
+
+        .hero h1 {
+            font-size: clamp(2.5rem, 6vw, 4.5rem);
+            line-height: 1.1;
+
+            margin-bottom: 24px;
+        }
+
+        .hero-description {
+            max-width: 650px;
+            margin: auto;
+
+            font-size: 1.15rem;
+
+            color: #DBEAFE;
+        }
+
+
+        /* =====================================================
+           PREMIO
+           Fondo: #FFFFFF
+           Borde/detalle: #D4A72C
+           ===================================================== */
+
+        .prize-card {
+            max-width: 500px;
+            margin: 40px auto;
+
+            padding: 28px;
+
+            background-color: var(--color-white);
+
+            border-radius: 16px;
+
+            border: 2px solid var(--color-gold);
+
+            color: var(--color-text);
+
+            box-shadow:
+                0 15px 40px rgba(0, 0, 0, 0.18);
+        }
+
+        .prize-label {
+            color: var(--color-text-secondary);
+
+            font-size: 0.85rem;
+            font-weight: 700;
+
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .prize-name {
+            color: var(--color-primary-dark);
+
+            font-size: 1.8rem;
+            font-weight: 800;
+
+            margin: 8px 0;
+        }
+
+        .prize-description {
+            color: var(--color-text-secondary);
+        }
+
+
+        /* =====================================================
+           BOTÓN PRINCIPAL
+           Fondo: #D4A72C
+           Texto: #172554
+           ===================================================== */
+
+        .btn-primary {
+            display: inline-block;
+
+            background-color: var(--color-gold);
+            color: var(--color-primary-dark);
+
+            padding: 16px 34px;
+
+            border-radius: 10px;
+
+            font-size: 1.05rem;
+            font-weight: 800;
+
+            border: none;
+
+            cursor: pointer;
+
+            transition:
+                transform 0.2s ease,
+                box-shadow 0.2s ease,
+                background-color 0.2s ease;
+        }
+
+        .btn-primary:hover {
+            background-color: #E3B83F;
+
+            transform: translateY(-2px);
+
+            box-shadow:
+                0 8px 20px rgba(0, 0, 0, 0.2);
+        }
+
+
+        /* =====================================================
+           INFORMACIÓN
+           Fondo: #F8FAFC
+           ===================================================== */
+
+        .section {
+            max-width: 1100px;
+
+            margin: auto;
+
+            padding: 80px 24px;
+        }
+
+        .section-header {
+            text-align: center;
+
+            max-width: 700px;
+
+            margin: 0 auto 45px;
+        }
+
+        .section-header h2 {
+            color: var(--color-primary-dark);
+
+            font-size: 2rem;
+
+            margin-bottom: 12px;
+        }
+
+        .section-header p {
+            color: var(--color-text-secondary);
+        }
+
+
+        /* =====================================================
+           CARDS DE INFORMACIÓN
+           Fondo: #FFFFFF
+           Borde: #E2E8F0
+           ===================================================== */
+
+        .info-grid {
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap: 24px;
+        }
+
+        .info-card {
+            background-color: var(--color-white);
+
+            border: 1px solid var(--color-border);
+
+            border-radius: 14px;
+
+            padding: 30px;
+
+            text-align: center;
+
+            transition:
+                transform 0.2s ease,
+                box-shadow 0.2s ease;
+        }
+
+        .info-card:hover {
+            transform: translateY(-4px);
+
+            box-shadow:
+                0 10px 25px rgba(15, 23, 42, 0.08);
+        }
+
+        .info-number {
+            width: 48px;
+            height: 48px;
+
+            margin: 0 auto 18px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            border-radius: 50%;
+
+            background-color: #DBEAFE;
+
+            color: var(--color-primary);
+
+            font-weight: 800;
+        }
+
+        .info-card h3 {
+            color: var(--color-primary-dark);
+
+            margin-bottom: 10px;
+        }
+
+        .info-card p {
+            color: var(--color-text-secondary);
+
+            font-size: 0.95rem;
+        }
+
+
+        /* =====================================================
+           DATOS DEL SORTEO
+           Fondo: #FFFFFF
+           ===================================================== */
+
+        .details {
+            background-color: var(--color-white);
+
+            border-top: 1px solid var(--color-border);
+            border-bottom: 1px solid var(--color-border);
+        }
+
+        .details-grid {
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap: 20px;
+        }
+
+        .detail {
+            text-align: center;
+
+            padding: 25px;
+        }
+
+        .detail strong {
+            display: block;
+
+            color: var(--color-primary);
+
+            font-size: 1.6rem;
+
+            margin-bottom: 5px;
+        }
+
+        .detail span {
+            color: var(--color-text-secondary);
+        }
+
+
+        /* =====================================================
+           CONFIANZA
+           Fondo: #F8FAFC
+           ===================================================== */
+
+        .trust {
+            max-width: 850px;
+
+            margin: auto;
+
+            padding: 70px 24px;
+
+            text-align: center;
+        }
+
+        .trust h2 {
+            color: var(--color-primary-dark);
+
+            margin-bottom: 15px;
+        }
+
+        .trust p {
+            color: var(--color-text-secondary);
+
+            margin-bottom: 25px;
+        }
+
+        .trust-badge {
+            display: inline-block;
+
+            padding: 10px 18px;
+
+            border-radius: 999px;
+
+            background-color: #DCFCE7;
+
+            color: var(--color-success);
+
+            font-weight: 700;
+
+            font-size: 0.9rem;
+        }
+
+
+        /* =====================================================
+           SOPORTE + REDES
+           Fondo: #172554
+           ===================================================== */
+
+        .contact-section {
+            background-color: var(--color-primary-dark);
+
+            color: var(--color-white);
+
+            padding: 70px 24px;
+        }
+
+        .contact-container {
+            max-width: 900px;
+
+            margin: auto;
+
+            text-align: center;
+        }
+
+        .contact-container h2 {
+            font-size: 2rem;
+
+            margin-bottom: 12px;
+        }
+
+        .contact-container > p {
+            color: #BFDBFE;
+
+            margin-bottom: 35px;
+        }
+
+        .contact-buttons {
+            display: flex;
+
+            justify-content: center;
+
+            flex-wrap: wrap;
+
+            gap: 12px;
+        }
+
+        .contact-button {
+            display: inline-block;
+
+            padding: 12px 22px;
+
+            border: 1px solid #3B82F6;
+
+            border-radius: 8px;
+
+            color: var(--color-white);
+
+            font-weight: 600;
+
+            transition:
+                background-color 0.2s ease;
+        }
+
+        .contact-button:hover {
+            background-color: var(--color-primary);
+        }
+
+
+        /* =====================================================
+           FOOTER
+           Fondo: #0F172A
+           ===================================================== */
+
+        footer {
+            background-color: #0F172A;
+
+            color: #94A3B8;
+
+            text-align: center;
+
+            padding: 25px 20px;
+
+            font-size: 0.85rem;
+        }
+
+
+        /* =====================================================
+           RESPONSIVE
+           ===================================================== */
+
+        @media (max-width: 768px) {
+
+            .navbar {
+                padding: 15px 18px;
+            }
+
+            .hero {
+                padding: 70px 20px 80px;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .info-grid,
+            .details-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .section {
+                padding: 60px 20px;
+            }
+
+            .contact-buttons {
+                flex-direction: column;
+            }
+
+            .contact-button {
+                width: 100%;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+
+    <!-- =====================================================
+         HEADER
+         ===================================================== -->
+
+    <header>
+
+        <nav class="navbar">
+
+            <a href="#" class="logo">
+                GRAN<span>SORTEO</span>
+            </a>
+
+            <a href="#informacion" class="nav-link">
+                Información
+            </a>
+
+        </nav>
+
+    </header>
+
+
+    <!-- =====================================================
+         HERO PRINCIPAL
+         ===================================================== -->
+
+    <main>
+
+        <section class="hero">
+
+            <div class="hero-content">
+
+                <span class="hero-label">
+                    GRAN SORTEO 2026
+                </span>
+
+                <h1>
+                    Tu oportunidad de ganar
+                </h1>
+
+                <p class="hero-description">
+                    Participa en nuestro gran sorteo y ten la oportunidad
+                    de llevarte un premio increíble.
+                </p>
+
+
+                <!-- PREMIO -->
+
+                <div class="prize-card">
+
+                    <div class="prize-label">
+                        Premio principal
+                    </div>
+
+                    <div class="prize-name">
+                        [NOMBRE DEL PREMIO]
+                    </div>
+
+                    <p class="prize-description">
+                        [Descripción breve del premio]
+                    </p>
+
+                </div>
+
+
+                <!-- BOTÓN DE COMPRA -->
+
+                <a href="compra.html" class="btn-primary">
+                    COMPRAR MI TICKET
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             CÓMO PARTICIPAR
+             ================================================= -->
+
+        <section class="section" id="informacion">
+
+            <div class="section-header">
+
+                <h2>
+                    ¿Cómo participar?
+                </h2>
+
+                <p>
+                    Participar es sencillo. Sigue estos tres pasos.
+                </p>
+
+            </div>
+
+
+            <div class="info-grid">
+
+
+                <article class="info-card">
+
+                    <div class="info-number">
+                        1
+                    </div>
+
+                    <h3>
+                        Realiza tu pago
+                    </h3>
+
+                    <p>
+                        Realiza el depósito correspondiente
+                        utilizando el código QR proporcionado.
+                    </p>
+
+                </article>
+
+
+                <article class="info-card">
+
+                    <div class="info-number">
+                        2
+                    </div>
+
+                    <h3>
+                        Envía tu comprobante
+                    </h3>
+
+                    <p>
+                        Completa el formulario con tus datos
+                        y adjunta una fotografía de tu comprobante.
+                    </p>
+
+                </article>
+
+
+                <article class="info-card">
+
+                    <div class="info-number">
+                        3
+                    </div>
+
+                    <h3>
+                        Recibe tu ticket
+                    </h3>
+
+                    <p>
+                        Una vez verificado tu pago, recibirás
+                        tu ticket con tu número de participación.
+                    </p>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             DATOS DEL SORTEO
+             ================================================= -->
+
+        <section class="details">
+
+            <div class="section">
+
+                <div class="section-header">
+
+                    <h2>
+                        Información del sorteo
+                    </h2>
+
+                </div>
+
+
+                <div class="details-grid">
+
+
+                    <div class="detail">
+
+                        <strong>
+                            Bs. XX
+                        </strong>
+
+                        <span>
+                            Precio por ticket
+                        </span>
+
+                    </div>
+
+
+                    <div class="detail">
+
+                        <strong>
+                            [FECHA]
+                        </strong>
+
+                        <span>
+                            Fecha del sorteo
+                        </span>
+
+                    </div>
+
+
+                    <div class="detail">
+
+                        <strong>
+                            10.000
+                        </strong>
+
+                        <span>
+                            Tickets disponibles
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             CONFIANZA
+             ================================================= -->
+
+        <section class="trust">
+
+            <h2>
+                Un sorteo transparente
+            </h2>
+
+            <p>
+                Cada participación es registrada y verificada.
+                Los tickets son asignados individualmente una vez
+                confirmado el pago.
+            </p>
+
+            <span class="trust-badge">
+                ✓ Participación verificada
+            </span>
+
+        </section>
+
+
+    </main>
+
+
+    <!-- =====================================================
+         SOPORTE + REDES SOCIALES
+         ===================================================== -->
+
+    <section class="contact-section">
+
+        <div class="contact-container">
+
+            <h2>
+                ¿Necesitas ayuda?
+            </h2>
+
+            <p>
+                Estamos disponibles para ayudarte con tu participación.
+            </p>
+
+
+            <div class="contact-buttons">
+
+                <a href="#" class="contact-button">
+                    WhatsApp
+                </a>
+
+                <a href="#" class="contact-button">
+                    Soporte
+                </a>
+
+                <a href="#" class="contact-button">
+                    Instagram
+                </a>
+
+                <a href="#" class="contact-button">
+                    Facebook
+                </a>
+
+                <a href="#" class="contact-button">
+                    TikTok
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         FOOTER
+         ===================================================== -->
+
+    <footer>
+
+        © 2026 Gran Sorteo.
+        Todos los derechos reservados.
+
+    </footer>
+
+
+</body>
+</html>
