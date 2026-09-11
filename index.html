@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -5,9 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <meta name="description"
-          content="Participa en nuestro gran sorteo. Conoce los premios, realiza tu compra y participa.">
+          content="Participa en el Gran Sorteo y gana un HONOR Magic8 Lite.">
 
-    <title>Gran Sorteo | Participa y gana</title>
+    <title>Gran Sorteo | HONOR Magic8 Lite</title>
 
     <style>
 
@@ -21,6 +22,7 @@
             --color-secondary: #2563EB;
 
             --color-gold: #D4A72C;
+
             --color-success: #15803D;
 
             --color-background: #F8FAFC;
@@ -62,16 +64,16 @@
 
         /* =====================================================
            HEADER
-           Fondo: #FFFFFF
-           Texto: #172554
            ===================================================== */
 
         header {
             background-color: var(--color-white);
+
             border-bottom: 1px solid var(--color-border);
 
             position: sticky;
             top: 0;
+
             z-index: 1000;
         }
 
@@ -89,6 +91,7 @@
         .logo {
             font-size: 1.4rem;
             font-weight: 800;
+
             color: var(--color-primary-dark);
         }
 
@@ -98,7 +101,9 @@
 
         .nav-link {
             color: var(--color-text-secondary);
+
             font-weight: 600;
+
             transition: color 0.2s ease;
         }
 
@@ -109,8 +114,6 @@
 
         /* =====================================================
            HERO
-           Fondo: #172554
-           Azul principal oscuro
            ===================================================== */
 
         .hero {
@@ -142,6 +145,7 @@
             font-size: 0.9rem;
 
             letter-spacing: 1.5px;
+
             text-transform: uppercase;
 
             margin-bottom: 18px;
@@ -149,6 +153,7 @@
 
         .hero h1 {
             font-size: clamp(2.5rem, 6vw, 4.5rem);
+
             line-height: 1.1;
 
             margin-bottom: 24px;
@@ -156,6 +161,7 @@
 
         .hero-description {
             max-width: 650px;
+
             margin: auto;
 
             font-size: 1.15rem;
@@ -166,15 +172,14 @@
 
         /* =====================================================
            PREMIO
-           Fondo: #FFFFFF
-           Borde/detalle: #D4A72C
            ===================================================== */
 
         .prize-card {
             max-width: 500px;
+
             margin: 40px auto;
 
-            padding: 28px;
+            padding: 30px;
 
             background-color: var(--color-white);
 
@@ -192,36 +197,67 @@
             color: var(--color-text-secondary);
 
             font-size: 0.85rem;
+
             font-weight: 700;
 
             text-transform: uppercase;
+
             letter-spacing: 1px;
         }
 
         .prize-name {
             color: var(--color-primary-dark);
 
-            font-size: 1.8rem;
+            font-size: 2rem;
+
             font-weight: 800;
 
             margin: 8px 0;
         }
 
+        .prize-brand {
+            color: var(--color-gold);
+        }
+
         .prize-description {
             color: var(--color-text-secondary);
+
+            margin-bottom: 22px;
+        }
+
+        .phone-placeholder {
+            width: 150px;
+            height: 220px;
+
+            margin: 0 auto 20px;
+
+            border-radius: 20px;
+
+            background-color: #E2E8F0;
+
+            border: 3px solid #CBD5E1;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            color: var(--color-text-secondary);
+
+            font-size: 0.8rem;
         }
 
 
         /* =====================================================
            BOTÓN PRINCIPAL
-           Fondo: #D4A72C
-           Texto: #172554
            ===================================================== */
 
         .btn-primary {
             display: inline-block;
 
             background-color: var(--color-gold);
+
             color: var(--color-primary-dark);
 
             padding: 16px 34px;
@@ -229,6 +265,7 @@
             border-radius: 10px;
 
             font-size: 1.05rem;
+
             font-weight: 800;
 
             border: none;
@@ -252,8 +289,7 @@
 
 
         /* =====================================================
-           INFORMACIÓN
-           Fondo: #F8FAFC
+           SECCIONES
            ===================================================== */
 
         .section {
@@ -286,9 +322,7 @@
 
 
         /* =====================================================
-           CARDS DE INFORMACIÓN
-           Fondo: #FFFFFF
-           Borde: #E2E8F0
+           PASOS
            ===================================================== */
 
         .info-grid {
@@ -330,7 +364,9 @@
             margin: 0 auto 18px;
 
             display: flex;
+
             align-items: center;
+
             justify-content: center;
 
             border-radius: 50%;
@@ -357,13 +393,13 @@
 
         /* =====================================================
            DATOS DEL SORTEO
-           Fondo: #FFFFFF
            ===================================================== */
 
         .details {
             background-color: var(--color-white);
 
             border-top: 1px solid var(--color-border);
+
             border-bottom: 1px solid var(--color-border);
         }
 
@@ -399,7 +435,6 @@
 
         /* =====================================================
            CONFIANZA
-           Fondo: #F8FAFC
            ===================================================== */
 
         .trust {
@@ -442,8 +477,7 @@
 
 
         /* =====================================================
-           SOPORTE + REDES
-           Fondo: #172554
+           SOPORTE Y REDES
            ===================================================== */
 
         .contact-section {
@@ -474,6 +508,16 @@
             margin-bottom: 35px;
         }
 
+        .contact-title {
+            color: var(--color-white);
+
+            font-size: 1rem;
+
+            font-weight: 700;
+
+            margin-bottom: 15px;
+        }
+
         .contact-buttons {
             display: flex;
 
@@ -482,10 +526,21 @@
             flex-wrap: wrap;
 
             gap: 12px;
+
+            margin-bottom: 40px;
         }
 
-        .contact-button {
-            display: inline-block;
+
+        /* =====================================================
+           BOTONES DE SOPORTE
+           ===================================================== */
+
+        .support-button {
+            display: flex;
+
+            align-items: center;
+
+            gap: 10px;
 
             padding: 12px 22px;
 
@@ -498,17 +553,66 @@
             font-weight: 600;
 
             transition:
-                background-color 0.2s ease;
+                background-color 0.2s ease,
+                transform 0.2s ease;
         }
 
-        .contact-button:hover {
+        .support-button:hover {
             background-color: var(--color-primary);
+
+            transform: translateY(-2px);
+        }
+
+
+        /* =====================================================
+           ICONOS SOCIALES
+           ===================================================== */
+
+        .social-buttons {
+            display: flex;
+
+            justify-content: center;
+
+            gap: 16px;
+        }
+
+        .social-icon {
+            width: 52px;
+            height: 52px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            border-radius: 50%;
+
+            border: 1px solid #3B82F6;
+
+            color: var(--color-white);
+
+            transition:
+                background-color 0.2s ease,
+                transform 0.2s ease;
+        }
+
+        .social-icon:hover {
+            background-color: var(--color-primary);
+
+            transform: translateY(-3px);
+        }
+
+        .social-icon svg {
+            width: 24px;
+            height: 24px;
+
+            fill: currentColor;
         }
 
 
         /* =====================================================
            FOOTER
-           Fondo: #0F172A
            ===================================================== */
 
         footer {
@@ -555,13 +659,20 @@
                 flex-direction: column;
             }
 
-            .contact-button {
+            .support-button {
                 width: 100%;
+
+                justify-content: center;
+            }
+
+            .social-buttons {
+                gap: 12px;
             }
         }
 
     </style>
 </head>
+
 
 <body>
 
@@ -588,10 +699,15 @@
 
 
     <!-- =====================================================
-         HERO PRINCIPAL
+         CONTENIDO PRINCIPAL
          ===================================================== -->
 
     <main>
+
+
+        <!-- =================================================
+             HERO
+             ================================================= -->
 
         <section class="hero">
 
@@ -601,13 +717,15 @@
                     GRAN SORTEO 2026
                 </span>
 
+
                 <h1>
                     Tu oportunidad de ganar
                 </h1>
 
+
                 <p class="hero-description">
                     Participa en nuestro gran sorteo y ten la oportunidad
-                    de llevarte un premio increíble.
+                    de llevarte un nuevo HONOR Magic8 Lite.
                 </p>
 
 
@@ -619,18 +737,27 @@
                         Premio principal
                     </div>
 
+
                     <div class="prize-name">
-                        [NOMBRE DEL PREMIO]
+                        <span class="prize-brand">HONOR</span>
+                        Magic8 Lite
                     </div>
 
+
+                    <div class="phone-placeholder">
+                        Imagen del teléfono
+                    </div>
+
+
                     <p class="prize-description">
-                        [Descripción breve del premio]
+                        Un HONOR Magic8 Lite completamente nuevo
+                        para el ganador del sorteo.
                     </p>
 
                 </div>
 
 
-                <!-- BOTÓN DE COMPRA -->
+                <!-- COMPRA -->
 
                 <a href="compra.html" class="btn-primary">
                     COMPRAR MI TICKET
@@ -642,7 +769,7 @@
 
 
         <!-- =================================================
-             CÓMO PARTICIPAR
+             COMO PARTICIPAR
              ================================================= -->
 
         <section class="section" id="informacion">
@@ -716,6 +843,7 @@
 
                 </article>
 
+
             </div>
 
         </section>
@@ -779,6 +907,7 @@
 
                     </div>
 
+
                 </div>
 
             </div>
@@ -796,11 +925,13 @@
                 Un sorteo transparente
             </h2>
 
+
             <p>
                 Cada participación es registrada y verificada.
                 Los tickets son asignados individualmente una vez
                 confirmado el pago.
             </p>
+
 
             <span class="trust-badge">
                 ✓ Participación verificada
@@ -813,45 +944,128 @@
 
 
     <!-- =====================================================
-         SOPORTE + REDES SOCIALES
+         SOPORTE Y REDES SOCIALES
          ===================================================== -->
 
     <section class="contact-section">
 
         <div class="contact-container">
 
+
             <h2>
                 ¿Necesitas ayuda?
             </h2>
+
 
             <p>
                 Estamos disponibles para ayudarte con tu participación.
             </p>
 
 
+            <!-- SOPORTE -->
+
+            <div class="contact-title">
+                Soporte
+            </div>
+
+
             <div class="contact-buttons">
 
-                <a href="#" class="contact-button">
+                <a href="#" class="support-button">
+
+                    <!-- WhatsApp -->
+
+                    <svg
+                        width="20"
+                        height="20"
+                        viewBox="0 0 24 24"
+                        aria-hidden="true">
+
+                        <path
+                            fill="currentColor"
+                            d="M20.52 3.48A11.84 11.84 0 0 0 12.06 0C5.5 0 .16 5.34.16 11.9c0 2.1.55 4.15 1.59 5.96L.1 24l6.29-1.64a11.86 11.86 0 0 0 5.67 1.44h.01c6.56 0 11.9-5.34 11.9-11.9a11.84 11.84 0 0 0-3.45-8.42ZM12.07 21.8a9.87 9.87 0 0 1-5.03-1.38l-.36-.21-3.73.97 1-3.64-.23-.37a9.88 9.88 0 1 1 8.35 4.63Zm5.42-7.4c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.25-.46-2.38-1.47-.88-.78-1.47-1.75-1.64-2.05-.17-.3-.02-.46.13-.61.14-.14.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.67-1.61-.92-2.21-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.49 0 1.47 1.07 2.89 1.22 3.09.15.2 2.1 3.21 5.09 4.5.71.31 1.27.49 1.7.63.71.23 1.35.2 1.86.12.57-.09 1.76-.72 2.01-1.42.25-.7.25-1.3.17-1.42-.07-.12-.27-.2-.57-.35Z"/>
+
+                    </svg>
+
                     WhatsApp
+
                 </a>
 
-                <a href="#" class="contact-button">
+
+                <a href="#" class="support-button">
+
                     Soporte
-                </a>
 
-                <a href="#" class="contact-button">
-                    Instagram
-                </a>
-
-                <a href="#" class="contact-button">
-                    Facebook
-                </a>
-
-                <a href="#" class="contact-button">
-                    TikTok
                 </a>
 
             </div>
+
+
+            <!-- REDES -->
+
+            <div class="contact-title">
+                Síguenos en nuestras redes
+            </div>
+
+
+            <div class="social-buttons">
+
+
+                <!-- Instagram -->
+
+                <a
+                    href="#"
+                    class="social-icon"
+                    aria-label="Instagram">
+
+                    <svg
+                        viewBox="0 0 24 24"
+                        aria-hidden="true">
+
+                        <path d="M7.8 2h8.4A5.8 5.8 0 0 1 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8A5.8 5.8 0 0 1 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2Zm0 2A3.8 3.8 0 0 0 4 7.8v8.4A3.8 3.8 0 0 0 7.8 20h8.4a3.8 3.8 0 0 0 3.8-3.8V7.8A3.8 3.8 0 0 0 16.2 4H7.8Zm8.7 1.5a1.35 1.35 0 1 1 0 2.7 1.35 1.35 0 0 1 0-2.7ZM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10Zm0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6Z"/>
+
+                    </svg>
+
+                </a>
+
+
+                <!-- Facebook -->
+
+                <a
+                    href="#"
+                    class="social-icon"
+                    aria-label="Facebook">
+
+                    <svg
+                        viewBox="0 0 24 24"
+                        aria-hidden="true">
+
+                        <path d="M13.5 22v-8h2.7l.4-3h-3.1V9.1c0-.87.24-1.46 1.5-1.46h1.7V5a22 22 0 0 0-2.45-.13c-2.43 0-4.1 1.49-4.1 4.23V11H8v3h2.65v8h2.85Z"/>
+
+                    </svg>
+
+                </a>
+
+
+                <!-- TikTok -->
+
+                <a
+                    href="#"
+                    class="social-icon"
+                    aria-label="TikTok">
+
+                    <svg
+                        viewBox="0 0 24 24"
+                        aria-hidden="true">
+
+                        <path d="M19.6 7.1a5.7 5.7 0 0 1-3.5-1.2v7.2a5.9 5.9 0 1 1-5.9-5.9c.25 0 .5.02.75.05v3.1a2.9 2.9 0 1 0 2.05 2.75V2h3.1a5.7 5.7 0 0 0 3.5 2.1v3Z"/>
+
+                    </svg>
+
+                </a>
+
+            </div>
+
 
         </div>
 
@@ -872,3 +1086,4 @@
 
 </body>
 </html>
+```
