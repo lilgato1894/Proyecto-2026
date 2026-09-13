@@ -126,30 +126,25 @@
         }
 
         /* =========================
-           MARCA BOLIVIA
+           LOGO BOLIVIA
         ========================= */
 
         .bolivia-brand {
             display: inline-flex;
             align-items: center;
+            justify-content: center;
             margin-left: 16px;
             padding-left: 16px;
             border-left: 2px solid rgba(255,255,255,.22);
-            font-family: 'Anton', sans-serif;
-            font-size: 24px;
             line-height: 1;
-            letter-spacing: 1.5px;
-            color: var(--white);
         }
 
-        .bolivia-brand::before {
-            content: "";
-            width: 7px;
-            height: 7px;
-            margin-right: 9px;
-            background: var(--lime);
-            transform: rotate(45deg);
-            box-shadow: 0 0 10px rgba(183,255,0,.45);
+        .bolivia-brand img {
+            display: block;
+            width: 90px;
+            height: auto;
+            max-height: 32px;
+            object-fit: contain;
         }
 
         .header-link {
@@ -790,14 +785,11 @@
             .bolivia-brand {
                 margin-left: 10px;
                 padding-left: 10px;
-                font-size: 19px;
-                letter-spacing: 1px;
             }
 
-            .bolivia-brand::before {
-                width: 5px;
-                height: 5px;
-                margin-right: 7px;
+            .bolivia-brand img {
+                width: 70px;
+                max-height: 25px;
             }
 
             .header-link {
@@ -890,12 +882,11 @@
             .bolivia-brand {
                 margin-left: 7px;
                 padding-left: 7px;
-                font-size: 16px;
-                letter-spacing: .5px;
             }
 
-            .bolivia-brand::before {
-                display: none;
+            .bolivia-brand img {
+                width: 58px;
+                max-height: 21px;
             }
 
             .header-link {
@@ -942,7 +933,10 @@
         <span class="blue">GANA</span>
 
         <span class="bolivia-brand">
-            BOLIVIA
+            <img
+                src="assets/logo-bolivia.png"
+                alt="Bolivia"
+            >
         </span>
 
     </a>
