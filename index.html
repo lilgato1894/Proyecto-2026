@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -108,6 +109,9 @@
         }
 
         .logo {
+            display: flex;
+            align-items: center;
+            gap: 9px;
             font-family: 'Anton', sans-serif;
             font-size: 27px;
             letter-spacing: 1px;
@@ -120,6 +124,18 @@
 
         .logo .blue {
             color: var(--blue-bright);
+        }
+
+        /* =========================
+           LOGO DE BOLIVIA
+        ========================= */
+
+        .bolivia-logo {
+            width: 30px;
+            height: auto;
+            object-fit: contain;
+            display: block;
+            flex-shrink: 0;
         }
 
         .header-link {
@@ -755,6 +771,11 @@
 
             .logo {
                 font-size: 22px;
+                gap: 7px;
+            }
+
+            .bolivia-logo {
+                width: 25px;
             }
 
             .header-link {
@@ -869,6 +890,12 @@
 
     <a href="index.html" class="logo">
         INVIERTE <span class="lime">Y</span> <span class="blue">GANA</span>
+
+        <img
+            src="assets/bolivia.png"
+            alt="Bolivia"
+            class="bolivia-logo"
+        >
     </a>
 
     <a href="#informacion" class="header-link">
@@ -1308,3 +1335,5 @@
 
 </body>
 </html>
+```
+
