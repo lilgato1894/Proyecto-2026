@@ -4,32 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Gran Sorteo 2026 | HONOR Magic8 Lite</title>
+    <title>INVIERTE Y GANA | HONOR Magic8 Lite</title>
 
-    <meta
-        name="description"
-        content="Participa en el Gran Sorteo 2026 y gana un HONOR Magic8 Lite."
-    >
+    <meta name="description"
+          content="Participa en INVIERTE Y GANA y gana un HONOR Magic8 Lite. Ticket Bs. 5. Sorteo presencial y transmisión en vivo el 11/10/2026.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Montserrat:wght@400;500;600;700;800;900&display=swap"
+          rel="stylesheet">
 
     <style>
+
         :root {
-            --green-dark: #166534;
-            --green-deep: #14532D;
-            --green-main: #16A34A;
-            --green-medium: #15803D;
-            --green-light: #DCFCE7;
-            --green-very-light: #ECFDF5;
-
-            --background: #F0FDF4;
-            --lime: #84CC16;
-            --gold: #EAB308;
-
-            --text: #14532D;
-            --text-secondary: #4B5563;
-
-            --white: #FFFFFF;
-            --border: #BBF7D0;
-            --footer: #052E16;
+            --black: #030507;
+            --black-soft: #080b10;
+            --lime: #b7ff00;
+            --lime-bright: #c6ff00;
+            --blue: #006cff;
+            --blue-bright: #1683ff;
+            --purple: #651cff;
+            --purple-bright: #7b2cff;
+            --white: #ffffff;
+            --gray: #b8bec8;
+            --dark-gray: #171b22;
         }
 
         * {
@@ -43,897 +42,1269 @@
         }
 
         body {
-            font-family: Arial, Helvetica, sans-serif;
-            background: var(--background);
-            color: var(--text);
-            line-height: 1.6;
+            background: var(--black);
+            color: var(--white);
+            font-family: 'Montserrat', sans-serif;
+            overflow-x: hidden;
         }
 
         a {
-            color: inherit;
             text-decoration: none;
+            color: inherit;
         }
 
-        .container {
-            width: 90%;
-            max-width: 1100px;
-            margin: 0 auto;
+        /* =========================
+           EFECTOS GENERALES
+        ========================= */
+
+        .paint-blue {
+            position: absolute;
+            background: var(--blue);
+            transform: rotate(-12deg);
+            filter: blur(.2px);
+            z-index: 0;
+        }
+
+        .paint-lime {
+            position: absolute;
+            background: var(--lime);
+            transform: rotate(-8deg);
+            z-index: 0;
+        }
+
+        .paint-purple {
+            position: absolute;
+            background: var(--purple);
+            transform: rotate(10deg);
+            z-index: 0;
+        }
+
+        .glow-lime {
+            text-shadow:
+                0 0 8px rgba(183,255,0,.35),
+                0 0 25px rgba(183,255,0,.15);
+        }
+
+        .glow-blue {
+            box-shadow:
+                0 0 20px rgba(0,108,255,.18);
         }
 
         /* =========================
            HEADER
-        ========================== */
+        ========================= */
 
         header {
-            background: var(--white);
-            border-bottom: 1px solid var(--border);
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
-
-        .header-content {
-            min-height: 72px;
+            position: relative;
+            z-index: 20;
+            height: 78px;
             display: flex;
             align-items: center;
             justify-content: space-between;
-            gap: 20px;
+            padding: 0 7%;
+            border-bottom: 1px solid rgba(255,255,255,.08);
+            background: rgba(3,5,7,.92);
+            backdrop-filter: blur(10px);
         }
 
         .logo {
-            font-size: 1.35rem;
-            font-weight: 900;
-            color: var(--green-deep);
-            letter-spacing: -0.5px;
+            font-family: 'Anton', sans-serif;
+            font-size: 27px;
+            letter-spacing: 1px;
+            line-height: 1;
         }
 
-        .logo span {
-            color: var(--green-main);
+        .logo .lime {
+            color: var(--lime);
+        }
+
+        .logo .blue {
+            color: var(--blue-bright);
         }
 
         .header-link {
-            font-size: 0.95rem;
-            font-weight: 700;
-            color: var(--green-dark);
+            font-size: 13px;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: white;
+            border: 1px solid rgba(183,255,0,.45);
+            padding: 11px 18px;
+            transition: .25s ease;
         }
 
         .header-link:hover {
-            color: var(--green-main);
+            background: var(--lime);
+            color: #000;
         }
 
         /* =========================
            HERO
-        ========================== */
+        ========================= */
 
         .hero {
-            background:
-                linear-gradient(
-                    135deg,
-                    var(--green-deep) 0%,
-                    var(--green-dark) 55%,
-                    var(--green-main) 100%
-                );
+            position: relative;
+            min-height: 730px;
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+            padding: 70px 7%;
+        }
 
-            color: var(--white);
-            padding: 75px 0 85px;
+        .hero::before {
+            content: "";
+            position: absolute;
+            width: 700px;
+            height: 700px;
+            background: radial-gradient(
+                circle,
+                rgba(0,108,255,.16) 0%,
+                rgba(0,108,255,.04) 40%,
+                transparent 70%
+            );
+            right: -200px;
+            top: 20px;
+        }
+
+        .hero::after {
+            content: "";
+            position: absolute;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(
+                circle,
+                rgba(183,255,0,.10) 0%,
+                transparent 65%
+            );
+            left: -250px;
+            bottom: -250px;
+        }
+
+        .hero-blue-stroke {
+            position: absolute;
+            top: 40px;
+            left: -60px;
+            width: 390px;
+            height: 35px;
+            background: var(--blue);
+            transform: rotate(-15deg);
+            opacity: .9;
+        }
+
+        .hero-purple-stroke {
+            position: absolute;
+            top: 70px;
+            right: -50px;
+            width: 280px;
+            height: 28px;
+            background: var(--purple);
+            transform: rotate(-48deg);
         }
 
         .hero-content {
-            display: grid;
-            grid-template-columns: 1.1fr 0.9fr;
-            align-items: center;
-            gap: 50px;
-        }
-
-        .hero-text {
-            text-align: left;
+            position: relative;
+            z-index: 5;
+            width: 55%;
         }
 
         .eyebrow {
             display: inline-block;
-            background: rgba(255, 255, 255, 0.13);
-            border: 1px solid rgba(255, 255, 255, 0.22);
-            padding: 7px 14px;
-            border-radius: 999px;
-            font-size: 0.82rem;
-            font-weight: 700;
-            letter-spacing: 0.7px;
-            margin-bottom: 18px;
+            color: var(--lime);
+            font-size: 13px;
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            margin-bottom: 16px;
         }
 
-        .hero h1 {
-            font-size: clamp(2.5rem, 6vw, 4.6rem);
-            line-height: 1;
-            margin-bottom: 20px;
+        .hero-title {
+            font-family: 'Anton', sans-serif;
+            font-size: clamp(70px, 9vw, 135px);
+            line-height: .82;
             letter-spacing: -2px;
+            text-transform: uppercase;
         }
 
-        .hero h1 span {
-            color: #BEF264;
+        .hero-title .white {
+            display: block;
+            color: white;
+        }
+
+        .hero-title .lime {
+            display: block;
+            color: var(--lime);
+            text-shadow: 0 0 25px rgba(183,255,0,.12);
         }
 
         .hero-subtitle {
-            font-size: 1.25rem;
-            max-width: 620px;
-            margin-bottom: 28px;
-            color: #F0FDF4;
+            margin-top: 27px;
+            max-width: 590px;
+            font-size: 18px;
+            line-height: 1.65;
+            color: var(--gray);
         }
 
-        .cta-button {
-            display: inline-block;
+        .hero-subtitle strong {
+            color: white;
+        }
+
+        .hero-actions {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin-top: 35px;
+        }
+
+        .btn-primary {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-width: 230px;
+            padding: 17px 27px;
             background: var(--lime);
-            color: var(--green-deep);
-            padding: 15px 27px;
-            border-radius: 10px;
-            font-size: 1rem;
+            color: #050505;
+            font-size: 14px;
             font-weight: 900;
-            letter-spacing: 0.3px;
-            transition: 0.2s ease;
-            box-shadow: 0 8px 22px rgba(0, 0, 0, 0.15);
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            transform: skew(-7deg);
+            transition: .25s ease;
+            box-shadow: 7px 7px 0 var(--blue);
         }
 
-        .cta-button:hover {
-            transform: translateY(-2px);
-            background: #A3E635;
-            box-shadow: 0 12px 26px rgba(0, 0, 0, 0.2);
+        .btn-primary span {
+            transform: skew(7deg);
+        }
+
+        .btn-primary:hover {
+            transform: skew(-7deg) translateY(-4px);
+            box-shadow: 10px 10px 0 var(--purple);
+        }
+
+        .btn-secondary {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-width: 190px;
+            padding: 16px 25px;
+            border: 2px solid var(--blue);
+            color: white;
+            font-size: 13px;
+            font-weight: 800;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            transition: .25s ease;
+        }
+
+        .btn-secondary:hover {
+            background: var(--blue);
         }
 
         /* =========================
-           PRIZE CARD
-        ========================== */
+           PREMIO
+        ========================= */
+
+        .hero-prize {
+            position: absolute;
+            z-index: 5;
+            right: 6%;
+            width: 36%;
+            max-width: 470px;
+        }
 
         .prize-card {
-            background: var(--white);
-            color: var(--text);
-            border-radius: 22px;
-            padding: 32px 25px;
-            text-align: center;
-            box-shadow: 0 20px 50px rgba(5, 46, 22, 0.25);
+            position: relative;
+            background:
+                linear-gradient(
+                    145deg,
+                    #11161d,
+                    #06080b
+                );
+            border: 1px solid rgba(255,255,255,.12);
+            padding: 30px;
+            transform: rotate(3deg);
+            box-shadow:
+                15px 15px 0 rgba(0,108,255,.8),
+                -8px -8px 0 rgba(183,255,0,.8);
+        }
+
+        .prize-card::before {
+            content: "";
+            position: absolute;
+            top: -13px;
+            right: 35px;
+            width: 100px;
+            height: 20px;
+            background: var(--purple);
+            transform: rotate(-8deg);
         }
 
         .prize-label {
-            font-size: 0.8rem;
-            font-weight: 800;
+            color: var(--lime);
+            font-size: 12px;
+            font-weight: 900;
+            letter-spacing: 3px;
             text-transform: uppercase;
-            color: var(--green-main);
-            letter-spacing: 1.2px;
-            margin-bottom: 10px;
         }
 
-        .phone-image {
-            display: block;
-            width: 190px;
-            height: 260px;
-            margin: 0 auto 24px;
+        .prize-image-container {
+            margin: 25px auto;
+            height: 330px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .prize-image {
+            width: 100%;
+            max-width: 330px;
+            max-height: 330px;
             object-fit: contain;
+            filter: drop-shadow(0 20px 25px rgba(0,0,0,.8));
         }
 
-        .prize-card h2 {
-            font-size: 1.6rem;
-            margin-bottom: 6px;
+        .prize-name {
+            font-family: 'Anton', sans-serif;
+            font-size: 34px;
+            text-transform: uppercase;
         }
 
-        .prize-card p {
-            color: var(--text-secondary);
-            font-size: 0.95rem;
+        .prize-name span {
+            color: var(--lime);
         }
 
         /* =========================
-           GENERAL SECTIONS
-        ========================== */
+           INFO BAR
+        ========================= */
 
-        section {
-            padding: 75px 0;
+        .info-strip {
+            position: relative;
+            z-index: 10;
+            margin: 0 7%;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            background: #090c10;
+            border-top: 1px solid rgba(255,255,255,.12);
+            border-bottom: 1px solid rgba(255,255,255,.12);
+        }
+
+        .info-item {
+            position: relative;
+            padding: 28px;
+            text-align: center;
+            border-right: 1px solid rgba(255,255,255,.1);
+        }
+
+        .info-item:last-child {
+            border-right: none;
+        }
+
+        .info-value {
+            font-family: 'Anton', sans-serif;
+            font-size: 35px;
+            color: var(--lime);
+            line-height: 1;
+        }
+
+        .info-label {
+            margin-top: 8px;
+            font-size: 11px;
+            color: var(--gray);
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* =========================
+           COMO PARTICIPAR
+        ========================= */
+
+        .section {
+            position: relative;
+            padding: 110px 7%;
+            overflow: hidden;
+        }
+
+        .section-heading {
+            max-width: 720px;
+            margin-bottom: 55px;
+        }
+
+        .section-tag {
+            color: var(--blue-bright);
+            font-size: 12px;
+            font-weight: 900;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            margin-bottom: 12px;
         }
 
         .section-title {
-            text-align: center;
-            margin-bottom: 45px;
+            font-family: 'Anton', sans-serif;
+            font-size: clamp(48px, 6vw, 82px);
+            text-transform: uppercase;
+            line-height: .9;
         }
 
-        .section-title h2 {
-            font-size: 2rem;
-            color: var(--green-deep);
-            margin-bottom: 8px;
+        .section-title span {
+            color: var(--lime);
         }
-
-        .section-title p {
-            color: var(--text-secondary);
-        }
-
-        /* =========================
-           STEPS
-        ========================== */
 
         .steps {
-            background: var(--white);
-        }
-
-        .steps-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: 25px;
         }
 
         .step {
-            border: 1px solid var(--border);
-            background: var(--green-very-light);
-            border-radius: 16px;
-            padding: 30px 25px;
-            text-align: center;
+            position: relative;
+            padding: 38px 30px;
+            background: #090c10;
+            border: 1px solid rgba(255,255,255,.1);
+            min-height: 270px;
+            transition: .25s ease;
+        }
+
+        .step:hover {
+            transform: translateY(-7px);
+            border-color: var(--lime);
+        }
+
+        .step:nth-child(2) {
+            border-top: 3px solid var(--blue);
+        }
+
+        .step:nth-child(3) {
+            border-top: 3px solid var(--purple);
         }
 
         .step-number {
-            width: 45px;
-            height: 45px;
-            margin: 0 auto 18px;
-            border-radius: 50%;
-            background: var(--green-main);
-            color: var(--white);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.1rem;
-            font-weight: 900;
+            font-family: 'Anton', sans-serif;
+            font-size: 65px;
+            line-height: 1;
+            color: var(--lime);
+            opacity: .95;
         }
 
         .step h3 {
-            margin-bottom: 8px;
-            color: var(--green-deep);
-        }
-
-        .step p {
-            color: var(--text-secondary);
-            font-size: 0.95rem;
-        }
-
-        /* =========================
-           DETAILS
-        ========================== */
-
-        .details {
-            background: var(--green-light);
-        }
-
-        .details-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 20px;
-        }
-
-        .detail-card {
-            background: var(--white);
-            border: 1px solid var(--border);
-            border-radius: 15px;
-            padding: 25px;
-            text-align: center;
-        }
-
-        .detail-card strong {
-            display: block;
-            font-size: 1.35rem;
-            color: var(--green-main);
-            margin-bottom: 8px;
-        }
-
-        .detail-card span {
-            color: var(--text-secondary);
-            font-size: 0.9rem;
-        }
-
-        /* =========================
-           TRUST
-        ========================== */
-
-        .trust {
-            background: var(--white);
-        }
-
-        .trust-box {
-            max-width: 850px;
-            margin: 0 auto;
-            background: var(--green-very-light);
-            border: 1px solid var(--border);
-            border-radius: 18px;
-            padding: 35px;
-            text-align: center;
-        }
-
-        .trust-icon {
-            width: 52px;
-            height: 52px;
-            margin: 0 auto 15px;
-            border-radius: 50%;
-            background: var(--green-main);
-            color: var(--white);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.5rem;
+            margin-top: 15px;
+            font-size: 19px;
+            text-transform: uppercase;
             font-weight: 900;
         }
 
-        .trust-box h2 {
-            color: var(--green-deep);
-            margin-bottom: 18px;
-        }
-
-        .trust-box p {
-            color: var(--text-secondary);
-            margin-bottom: 12px;
-        }
-
-        .trust-box a {
-            color: var(--green-main);
-            font-weight: 800;
-            text-decoration: underline;
-        }
-
-        .trust-box a:hover {
-            color: var(--green-deep);
+        .step p {
+            margin-top: 12px;
+            color: var(--gray);
+            font-size: 14px;
+            line-height: 1.6;
         }
 
         /* =========================
-           SUPPORT
-        ========================== */
+           MENSAJE CENTRAL
+        ========================= */
 
-        .support {
-            background: var(--green-deep);
-            color: var(--white);
-            text-align: center;
+        .statement {
+            position: relative;
+            padding: 80px 7%;
+            background: var(--lime);
+            color: #030507;
+            overflow: hidden;
         }
 
-        .support h2 {
-            font-size: 2rem;
-            margin-bottom: 10px;
+        .statement::before {
+            content: "";
+            position: absolute;
+            width: 150%;
+            height: 100px;
+            left: -25%;
+            top: -55px;
+            background: var(--black);
+            transform: rotate(-3deg);
         }
 
-        .support p {
-            color: #DCFCE7;
-            margin-bottom: 28px;
-        }
-
-        .support-buttons {
+        .statement-content {
+            position: relative;
+            z-index: 2;
             display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 14px;
+            align-items: center;
+            justify-content: space-between;
+            gap: 40px;
         }
 
-        .support-button {
-            display: inline-block;
-            padding: 13px 22px;
-            border-radius: 9px;
-            background: var(--white);
-            color: var(--green-deep);
-            font-weight: 800;
-            transition: 0.2s ease;
+        .statement h2 {
+            font-family: 'Anton', sans-serif;
+            font-size: clamp(45px, 6vw, 80px);
+            line-height: .9;
+            text-transform: uppercase;
         }
 
-        .support-button:hover {
-            background: var(--green-light);
-            transform: translateY(-2px);
+        .statement p {
+            max-width: 440px;
+            font-size: 17px;
+            line-height: 1.6;
+            font-weight: 600;
         }
 
         /* =========================
-           SOCIAL
-        ========================== */
+           TRANSPARENCIA
+        ========================= */
 
-        .social {
-            background: var(--green-very-light);
-            text-align: center;
+        .trust {
+            position: relative;
+            background: #07090c;
         }
 
-        .social h2 {
-            color: var(--green-deep);
-            margin-bottom: 20px;
+        .trust-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 35px;
+            align-items: stretch;
         }
 
-        .social-icons {
-            display: flex;
-            justify-content: center;
-            gap: 14px;
+        .trust-card {
+            padding: 42px;
+            background: #0b0f14;
+            border: 1px solid rgba(255,255,255,.1);
         }
 
-        .social-icon {
-            width: 45px;
-            height: 45px;
-            border-radius: 50%;
-            background: var(--white);
-            border: 1px solid var(--border);
+        .trust-card.highlight {
+            border: 2px solid var(--blue);
+            box-shadow: 10px 10px 0 var(--purple);
+        }
+
+        .trust-icon {
+            width: 55px;
+            height: 55px;
+            border: 2px solid var(--lime);
             display: flex;
             align-items: center;
             justify-content: center;
-            color: var(--green-dark);
-            transition: 0.2s ease;
+            font-size: 25px;
+            margin-bottom: 25px;
         }
 
-        .social-icon:hover {
-            background: var(--green-main);
-            color: var(--white);
-            transform: translateY(-2px);
+        .trust-card h3 {
+            font-size: 21px;
+            text-transform: uppercase;
+            margin-bottom: 14px;
         }
 
-        .social-icon svg {
-            width: 21px;
-            height: 21px;
-            fill: currentColor;
+        .trust-card p {
+            color: var(--gray);
+            font-size: 14px;
+            line-height: 1.7;
+        }
+
+        .participants-link {
+            display: inline-block;
+            margin-top: 25px;
+            color: var(--lime);
+            font-weight: 900;
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .participants-link:hover {
+            color: white;
+        }
+
+        /* =========================
+           CTA FINAL
+        ========================= */
+
+        .final-cta {
+            position: relative;
+            text-align: center;
+            padding: 120px 7%;
+            overflow: hidden;
+        }
+
+        .final-cta::before {
+            content: "";
+            position: absolute;
+            width: 800px;
+            height: 800px;
+            border-radius: 50%;
+            background: radial-gradient(
+                circle,
+                rgba(101,28,255,.13),
+                transparent 65%
+            );
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .final-cta-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .final-cta .small {
+            color: var(--blue-bright);
+            font-weight: 900;
+            font-size: 13px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+        }
+
+        .final-cta h2 {
+            margin: 15px auto 25px;
+            font-family: 'Anton', sans-serif;
+            font-size: clamp(60px, 9vw, 120px);
+            line-height: .82;
+            text-transform: uppercase;
+        }
+
+        .final-cta h2 span {
+            color: var(--lime);
+        }
+
+        .final-cta p {
+            max-width: 650px;
+            margin: 0 auto 35px;
+            color: var(--gray);
+            line-height: 1.6;
         }
 
         /* =========================
            FOOTER
-        ========================== */
+        ========================= */
 
         footer {
-            background: var(--footer);
-            color: #DCFCE7;
+            padding: 45px 7%;
+            background: #020304;
+            border-top: 1px solid rgba(255,255,255,.08);
+        }
+
+        .footer-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 30px;
+        }
+
+        .footer-logo {
+            font-family: 'Anton', sans-serif;
+            font-size: 28px;
+        }
+
+        .footer-logo span {
+            color: var(--lime);
+        }
+
+        .footer-text {
+            color: #747b85;
+            font-size: 12px;
+            line-height: 1.6;
+            text-align: right;
+        }
+
+        .footer-bottom {
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,.07);
+            color: #505760;
+            font-size: 11px;
             text-align: center;
-            padding: 25px 0;
-            font-size: 0.85rem;
-        }
-
-        footer p {
-            margin-bottom: 5px;
-        }
-
-        footer .footer-small {
-            color: #86EFAC;
-            font-size: 0.75rem;
         }
 
         /* =========================
            RESPONSIVE
-        ========================== */
+        ========================= */
 
-        @media (max-width: 800px) {
+        @media (max-width: 1000px) {
 
             .hero {
-                padding: 55px 0 65px;
+                min-height: auto;
+                padding-top: 80px;
+                padding-bottom: 100px;
             }
 
             .hero-content {
-                grid-template-columns: 1fr;
-                gap: 40px;
+                width: 60%;
             }
 
-            .hero-text {
-                text-align: center;
+            .hero-prize {
+                width: 38%;
+                right: 4%;
             }
 
-            .hero-subtitle {
-                margin-left: auto;
-                margin-right: auto;
+            .prize-image-container {
+                height: 270px;
             }
 
-            .steps-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .details-grid {
+            .steps {
                 grid-template-columns: 1fr;
             }
 
-            section {
-                padding: 60px 0;
+            .step {
+                min-height: auto;
             }
+
         }
 
-        @media (max-width: 500px) {
+        @media (max-width: 760px) {
 
-            .header-content {
-                min-height: 62px;
+            header {
+                padding: 0 5%;
+                height: 68px;
             }
 
             .logo {
-                font-size: 1.1rem;
+                font-size: 22px;
             }
 
             .header-link {
-                font-size: 0.85rem;
+                padding: 9px 12px;
+                font-size: 10px;
             }
 
-            .hero h1 {
-                font-size: 2.7rem;
+            .hero {
+                display: block;
+                padding: 65px 5% 80px;
+            }
+
+            .hero-content {
+                width: 100%;
+            }
+
+            .hero-title {
+                font-size: clamp(64px, 18vw, 105px);
             }
 
             .hero-subtitle {
-                font-size: 1.05rem;
+                font-size: 15px;
+            }
+
+            .hero-prize {
+                position: relative;
+                width: 88%;
+                max-width: 390px;
+                right: auto;
+                margin: 70px auto 0;
             }
 
             .prize-card {
-                padding: 28px 18px;
+                padding: 24px;
             }
 
-            .phone-image {
-                width: 165px;
-                height: 235px;
+            .prize-image-container {
+                height: 280px;
             }
 
-            .trust-box {
-                padding: 25px 20px;
+            .info-strip {
+                margin: 0 5%;
+                grid-template-columns: 1fr;
             }
+
+            .info-item {
+                border-right: none;
+                border-bottom: 1px solid rgba(255,255,255,.1);
+            }
+
+            .info-item:last-child {
+                border-bottom: none;
+            }
+
+            .section {
+                padding: 80px 5%;
+            }
+
+            .trust-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .statement-content {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .footer-top {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .footer-text {
+                text-align: left;
+            }
+
         }
+
+        @media (max-width: 480px) {
+
+            .hero-actions {
+                flex-direction: column;
+            }
+
+            .btn-primary,
+            .btn-secondary {
+                width: 100%;
+            }
+
+            .prize-card {
+                box-shadow:
+                    9px 9px 0 rgba(0,108,255,.8),
+                    -5px -5px 0 rgba(183,255,0,.8);
+            }
+
+            .trust-card {
+                padding: 30px 24px;
+            }
+
+        }
+
     </style>
 </head>
 
 <body>
 
-    <!-- =========================
-         HEADER
-    ========================== -->
+<!-- =========================
+     HEADER
+========================= -->
 
-    <header>
+<header>
 
-        <div class="container header-content">
+    <a href="index.html" class="logo">
+        INVIERTE <span class="lime">Y</span> <span class="blue">GANA</span>
+    </a>
 
-            <a href="index.html" class="logo">
-                GRAN<span>SORTEO</span>
+    <a href="#informacion" class="header-link">
+        Información
+    </a>
+
+</header>
+
+
+<!-- =========================
+     HERO
+========================= -->
+
+<section class="hero">
+
+    <div class="hero-blue-stroke"></div>
+    <div class="hero-purple-stroke"></div>
+
+    <div class="hero-content">
+
+        <div class="eyebrow">
+            TU TICKET, GRANDES OPORTUNIDADES
+        </div>
+
+        <h1 class="hero-title">
+
+            <span class="white">INVIERTE</span>
+
+            <span class="lime glow-lime">
+                Y GANA
+            </span>
+
+        </h1>
+
+        <p class="hero-subtitle">
+            <strong>Tu oportunidad puede estar a un ticket de distancia.</strong>
+            Participa por un <strong>HONOR Magic8 Lite</strong> y sé parte de
+            una experiencia creada para convertir una pequeña inversión
+            en una gran oportunidad.
+        </p>
+
+        <div class="hero-actions">
+
+            <a href="compra.html" class="btn-primary">
+                <span>COMPRAR MI TICKET</span>
             </a>
 
-            <a href="#informacion" class="header-link">
-                Información
+            <a href="#como-participar" class="btn-secondary">
+                ¿CÓMO PARTICIPAR?
             </a>
 
         </div>
 
-    </header>
+    </div>
 
 
-    <!-- =========================
-         HERO
-    ========================== -->
+    <!-- PREMIO -->
 
-    <main>
+    <div class="hero-prize">
 
-        <section class="hero">
+        <div class="prize-card">
 
-            <div class="container hero-content">
+            <div class="prize-label">
+                GRAN PREMIO
+            </div>
 
-                <div class="hero-text">
+            <div class="prize-image-container">
 
-                    <div class="eyebrow">
-                        GRAN SORTEO 2026
-                    </div>
-
-                    <h1>
-                        Tu oportunidad<br>
-                        de <span>ganar</span>
-                    </h1>
-
-                    <p class="hero-subtitle">
-                        Participa por un HONOR Magic8 Lite y conviértete
-                        en el próximo ganador.
-                    </p>
-
-                    <a href="compra.html" class="cta-button">
-                        COMPRAR MI TICKET
-                    </a>
-
-                </div>
-
-
-                <div class="prize-card">
-
-                    <div class="prize-label">
-                        Premio principal
-                    </div>
-
-                    <img
-                        src="assets/honor-magic8-lite.png"
-                        alt="HONOR Magic8 Lite"
-                        class="phone-image"
-                    >
-
-                    <h2>
-                        HONOR Magic8 Lite
-                    </h2>
-
-                    <p>
-                        El equipo que puede ser tuyo.
-                    </p>
-
-                </div>
+                <img
+                    src="assets/honor-magic8-lite.png"
+                    alt="HONOR Magic8 Lite"
+                    class="prize-image"
+                >
 
             </div>
 
-        </section>
-
-
-        <!-- =========================
-             COMO PARTICIPAR
-        ========================== -->
-
-        <section class="steps" id="informacion">
-
-            <div class="container">
-
-                <div class="section-title">
-
-                    <h2>
-                        ¿Cómo participar?
-                    </h2>
-
-                    <p>
-                        Participar es sencillo y seguro.
-                    </p>
-
-                </div>
-
-
-                <div class="steps-grid">
-
-                    <div class="step">
-
-                        <div class="step-number">
-                            1
-                        </div>
-
-                        <h3>
-                            Realiza tu pago
-                        </h3>
-
-                        <p>
-                            Realiza el depósito correspondiente
-                            utilizando los datos proporcionados.
-                        </p>
-
-                    </div>
-
-
-                    <div class="step">
-
-                        <div class="step-number">
-                            2
-                        </div>
-
-                        <h3>
-                            Envía tu comprobante
-                        </h3>
-
-                        <p>
-                            Completa el formulario de participación
-                            y adjunta tu comprobante de pago.
-                        </p>
-
-                    </div>
-
-
-                    <div class="step">
-
-                        <div class="step-number">
-                            3
-                        </div>
-
-                        <h3>
-                            Recibe tu ticket
-                        </h3>
-
-                        <p>
-                            Una vez verificado tu pago, recibirás
-                            oficialmente tu número de ticket.
-                        </p>
-
-                    </div>
-
-                </div>
-
+            <div class="prize-name">
+                HONOR <span>Magic8 Lite</span>
             </div>
 
-        </section>
+        </div>
+
+    </div>
+
+</section>
 
 
-        <!-- =========================
-             DETALLES DEL SORTEO
-        ========================== -->
+<!-- =========================
+     DATOS PRINCIPALES
+========================= -->
 
-        <section class="details">
+<section class="info-strip" id="informacion">
 
-            <div class="container">
+    <div class="info-item">
 
-                <div class="section-title">
+        <div class="info-value">
+            Bs. 5
+        </div>
 
-                    <h2>
-                        Información del sorteo
-                    </h2>
+        <div class="info-label">
+            Precio por ticket
+        </div>
 
-                </div>
-
-
-                <div class="details-grid">
-
-                    <div class="detail-card">
-
-                        <strong>
-                            Bs. 5
-                        </strong>
-
-                        <span>
-                            Precio por ticket
-                        </span>
-
-                    </div>
+    </div>
 
 
-                    <div class="detail-card">
+    <div class="info-item">
 
-                        <strong>
-                            11/10/2026
-                        </strong>
+        <div class="info-value">
+            11/10/2026
+        </div>
 
-                        <span>
-                            Fecha del sorteo
-                        </span>
+        <div class="info-label">
+            Fecha del sorteo
+        </div>
 
-                    </div>
+    </div>
 
 
-                    <div class="detail-card">
+    <div class="info-item">
 
-                        <strong>
-                            Presencial + En vivo
-                        </strong>
+        <div class="info-value">
+            EN VIVO
+        </div>
 
-                        <span>
-                            Modalidad del sorteo
-                        </span>
+        <div class="info-label">
+            Presencial + transmisión
+        </div>
 
-                    </div>
+    </div>
 
-                </div>
+</section>
 
+
+<!-- =========================
+     COMO PARTICIPAR
+========================= -->
+
+<section class="section" id="como-participar">
+
+    <div class="section-heading">
+
+        <div class="section-tag">
+            ES MUY FÁCIL
+        </div>
+
+        <h2 class="section-title">
+            PARTICIPA.<br>
+            <span>INVIERTE.</span><br>
+            GANA.
+        </h2>
+
+    </div>
+
+
+    <div class="steps">
+
+        <article class="step">
+
+            <div class="step-number">
+                01
             </div>
 
-        </section>
-
-
-        <!-- =========================
-             TRANSPARENCIA
-        ========================== -->
-
-        <section class="trust">
-
-            <div class="container">
-
-                <div class="trust-box">
-
-                    <div class="trust-icon">
-                        ✓
-                    </div>
-
-                    <h2>
-                        Un sorteo transparente y verificable
-                    </h2>
-
-                    <p>
-                        Cada comprobante de pago es revisado manualmente
-                        antes de confirmar la participación y asignar
-                        el ticket correspondiente.
-                    </p>
-
-                    <p>
-                        La información de participación y los tickets
-                        asignados estarán disponibles para verificación
-                        pública en esta misma página.
-                    </p>
-
-                    <p>
-                        Consulta el listado público de participantes
-                        <a href="participantes.html">aquí</a>.
-                    </p>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- =========================
-             SOPORTE
-        ========================== -->
-
-        <section class="support">
-
-            <div class="container">
-
-                <h2>
-                    ¿Necesitas ayuda?
-                </h2>
-
-                <p>
-                    Estamos disponibles para ayudarte con tu participación.
-                </p>
-
-                <div class="support-buttons">
-
-                    <a href="#" class="support-button">
-                        WhatsApp
-                    </a>
-
-                    <a href="#" class="support-button">
-                        Soporte
-                    </a>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- =========================
-             REDES SOCIALES
-        ========================== -->
-
-        <section class="social">
-
-            <div class="container">
-
-                <h2>
-                    Síguenos
-                </h2>
-
-                <div class="social-icons">
-
-                    <!-- Instagram -->
-                    <a href="#" class="social-icon" aria-label="Instagram">
-
-                        <svg viewBox="0 0 24 24">
-                            <path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H7zm5 3.5A4.5 4.5 0 1 1 7.5 12 4.5 4.5 0 0 1 12 7.5zm0 2A2.5 2.5 0 1 0 14.5 12 2.5 2.5 0 0 0 12 9.5zM17.75 6a1.25 1.25 0 1 1-1.25 1.25A1.25 1.25 0 0 1 17.75 6z"/>
-                        </svg>
-
-                    </a>
-
-
-                    <!-- Facebook -->
-                    <a href="#" class="social-icon" aria-label="Facebook">
-
-                        <svg viewBox="0 0 24 24">
-                            <path d="M13.5 22v-8h2.75l.4-3h-3.15V9.1c0-.87.24-1.46 1.5-1.46h1.6V4.95c-.28-.04-1.23-.12-2.35-.12-2.33 0-3.93 1.42-3.93 4.02V11H7.75v3h2.57v8h3.18z"/>
-                        </svg>
-
-                    </a>
-
-
-                    <!-- TikTok -->
-                    <a href="#" class="social-icon" aria-label="TikTok">
-
-                        <svg viewBox="0 0 24 24">
-                            <path d="M16.6 5.82A4.64 4.64 0 0 1 14.1 2h-3.17v13.62a2.78 2.78 0 1 1-2.78-2.78c.2 0 .4.02.59.06v-3.2a5.98 5.98 0 1 0 5.36 5.92V8.7a7.75 7.75 0 0 0 4.54 1.46V7a4.64 4.64 0 0 1-2.04-1.18z"/>
-                        </svg>
-
-                    </a>
-
-                </div>
-
-            </div>
-
-        </section>
-
-    </main>
-
-
-    <!-- =========================
-         FOOTER
-    ========================== -->
-
-    <footer>
-
-        <div class="container">
+            <h3>
+                Realiza tu pago
+            </h3>
 
             <p>
-                © 2026 Gran Sorteo. Todos los derechos reservados.
+                Adquiere tu participación por solo
+                <strong>Bs. 5</strong> mediante el
+                método de pago indicado.
             </p>
 
-            <p class="footer-small">
-                Participación sujeta a los términos y condiciones del sorteo.
+        </article>
+
+
+        <article class="step">
+
+            <div class="step-number">
+                02
+            </div>
+
+            <h3>
+                Registra tu participación
+            </h3>
+
+            <p>
+                Envía tus datos y el comprobante
+                de pago mediante el formulario
+                correspondiente.
             </p>
 
+        </article>
+
+
+        <article class="step">
+
+            <div class="step-number">
+                03
+            </div>
+
+            <h3>
+                Obtén tu ticket
+            </h3>
+
+            <p>
+                Una vez verificado tu pago,
+                recibirás tu número de ticket
+                correspondiente.
+            </p>
+
+        </article>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     MENSAJE
+========================= -->
+
+<section class="statement">
+
+    <div class="statement-content">
+
+        <h2>
+            TU ESFUERZO<br>
+            TAMBIÉN<br>
+            <strong>CUENTA.</strong>
+        </h2>
+
+        <p>
+            No se trata solamente de participar.
+            Se trata de darte una oportunidad.
+            Con un ticket de Bs. 5 puedes formar
+            parte de una experiencia donde tu
+            esfuerzo también puede convertirse
+            en un gran premio.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     TRANSPARENCIA
+========================= -->
+
+<section class="section trust">
+
+    <div class="section-heading">
+
+        <div class="section-tag">
+            TRANSPARENCIA
         </div>
 
-    </footer>
+        <h2 class="section-title">
+            UN SORTEO<br>
+            <span>CLARO Y VERIFICABLE.</span>
+        </h2>
+
+    </div>
+
+
+    <div class="trust-grid">
+
+        <article class="trust-card highlight">
+
+            <div class="trust-icon">
+                ✓
+            </div>
+
+            <h3>
+                Verificación de pagos
+            </h3>
+
+            <p>
+                Cada comprobante será revisado manualmente
+                antes de confirmar la participación.
+                El pago por sí solo no genera automáticamente
+                un ticket.
+            </p>
+
+        </article>
+
+
+        <article class="trust-card">
+
+            <div class="trust-icon">
+                #
+            </div>
+
+            <h3>
+                Participantes confirmados
+            </h3>
+
+            <p>
+                Los participantes cuyo pago haya sido
+                verificado podrán ser consultados en
+                el listado público correspondiente.
+                Los datos sensibles permanecerán privados.
+            </p>
+
+            <a href="participantes.html" class="participants-link">
+                Ver participantes →
+            </a>
+
+        </article>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     DATOS DEL SORTEO
+========================= -->
+
+<section class="section">
+
+    <div class="section-heading">
+
+        <div class="section-tag">
+            EL GRAN DÍA
+        </div>
+
+        <h2 class="section-title">
+            NOS VEMOS EL<br>
+            <span>11/10/2026</span>
+        </h2>
+
+    </div>
+
+
+    <div class="trust-grid">
+
+        <article class="trust-card">
+
+            <div class="trust-icon">
+                📍
+            </div>
+
+            <h3>
+                Sorteo presencial
+            </h3>
+
+            <p>
+                El sorteo se realizará de manera presencial
+                en la Facultad de Ciencias Económicas de la
+                Universidad Mayor de San Simón (UMSS).
+            </p>
+
+        </article>
+
+
+        <article class="trust-card">
+
+            <div class="trust-icon">
+                ▶
+            </div>
+
+            <h3>
+                Transmisión en vivo
+            </h3>
+
+            <p>
+                El evento será transmitido en vivo para que
+                los participantes puedan seguir el desarrollo
+                del sorteo.
+            </p>
+
+        </article>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     CTA FINAL
+========================= -->
+
+<section class="final-cta">
+
+    <div class="final-cta-content">
+
+        <div class="small">
+            TU OPORTUNIDAD COMIENZA AQUÍ
+        </div>
+
+        <h2>
+            INVIERTE<br>
+            <span>Y GANA.</span>
+        </h2>
+
+        <p>
+            Un ticket. Una oportunidad.
+            Un gran premio.
+        </p>
+
+        <a href="compra.html" class="btn-primary">
+            <span>COMPRAR MI TICKET</span>
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer>
+
+    <div class="footer-top">
+
+        <div class="footer-logo">
+            INVIERTE <span>Y GANA</span>
+        </div>
+
+        <div class="footer-text">
+            HONOR Magic8 Lite<br>
+            Sorteo 11/10/2026
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+        © 2026 INVIERTE Y GANA. Todos los derechos reservados.
+    </div>
+
+</footer>
+
 
 </body>
 </html>
-
-
